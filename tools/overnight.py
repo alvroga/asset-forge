@@ -88,7 +88,7 @@ def main():
     results = [run_prop(p, cfg["style"], base / p["id"], args)
                for p in cfg["props"] if not want or p["id"] in want]
     print(f"{sum(r['ok'] for r in results)}/{len(results)} ok in {(time.time()-t0)/60:.1f} min")
-    subprocess.run([sys.executable, str(ROOT / "tools" / "report.py"), args.date])
+    subprocess.run([str(LABPY), str(ROOT / "tools" / "report.py"), args.date])
 
 
 if __name__ == "__main__":
