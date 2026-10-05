@@ -1,0 +1,13 @@
+{
+  "style": "stylised game prop, single object centred, three-quarter view, soft even studio lighting, plain light grey background, no shadow on the ground, clean readable silhouette",
+  "props": [
+    {"id": "barrel",   "subject": "an old wooden barrel with iron hoops"},
+    {"id": "chest",    "subject": "a closed wooden treasure chest with brass corners and a lock"},
+    {"id": "potion",   "subject": "a round glass potion bottle with a cork and a glowing green liquid"},
+    {"id": "sword",    "subject": "a simple steel longsword with a leather-wrapped grip, lying flat, diagonal"},
+    {"id": "racket",   "subject": "a classic wooden tennis racket with white strings and a leather grip"},
+    {"id": "tree",     "subject": "a small stylised pine tree with a short trunk"},
+    {"id": "lantern",  "subject": "a hanging iron lantern with a lit candle behind glass"},
+    {"id": "crate",    "subject": "a stack of two wooden supply crates with rope handles"}
+  ]
+}

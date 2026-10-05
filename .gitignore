@@ -1,0 +1,5 @@
+vendor/
+runs/*/*/
+!runs/*/report.md
+.DS_Store
+*.log
