@@ -16,7 +16,8 @@ LAB = ROOT / "vendor" / "image-to-3dlab"
 LABPY = LAB / ".venv" / "bin" / "python"
 HYPY = LAB / "hunyuan_mlx" / "shape" / ".venv" / "bin" / "python"
 SD = LAB / "vendor" / "sdcpp"
-STAGE_TIMEOUT = 60 * 45
+HF_CACHE = Path.home() / ".cache" / "huggingface" / "hub"  # lab's bootstrap stores Qwen weights here
+STAGE_TIMEOUT =60 * 45
 
 
 def sh(cmd, log, cwd=None):
@@ -28,7 +29,7 @@ def sh(cmd, log, cwd=None):
 
 def qwen_weights():
     def pick(pattern):
-        hits = sorted(SD.rglob(pattern))
+        hits = sorted(SD.rglob(pattern)) or sorted(HF_CACHE.rglob(pattern))
         if not hits:
             raise FileNotFoundError(f"missing Qwen weight {pattern} under {SD}; run fetch-weights.sh")
         return hits[0]
