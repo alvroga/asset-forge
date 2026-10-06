@@ -8,3 +8,4 @@
 - 2026-10-05: overnight batch 8/8 OK in 117.7 min; FINDINGS.md written (conditional go). Potion glass failed (opaque); racket strings noisy; rest good.
 - 2026-10-05: Rigify addon fails to register in headless Blender 5.2.2 (KeyError 'rigify' / load-order mismatch) -> writing own deform-skeleton rigger (tools/rig_humanoid.py) instead.
 - 2026-10-05: postman 3D in 6.3 min (hunyuan 350 s). Rigging gotchas: Hunyuan/retopo GLB is triangle soup (57k verts for 20k faces) -> Blender bone-heat auto-weights silently fail (all verts unweighted) until `remove_doubles`; after welding (10k verts) auto-weights succeed. tools/rig_humanoid.py = own 21-bone deform skeleton from silhouette-detected joints + auto weights + Idle/Walk + GLB export. Postman walk pose looks clean.
+- 2026-10-05: barbarian 3D done 8.7 min: squat proportions, soft face, orange blotches on back texture; not rigged per user.

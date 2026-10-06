@@ -54,3 +54,8 @@ Qwen is half of it, so reusing hand-drawn or pre-made source images roughly halv
 Setup/weights steps (~15 GB in vendor + ~16 GB HF cache; weights live in `~/.cache/huggingface` and `~/.u2net`), the licence
 table with a per-asset provenance row, the prop-suitability list above, a Blender preview script (`tools/render_views.py`),
 and an engine-import check (Unity/glTFast, not done).
+
+## Characters (runs/characters/, added later the same day)
+- **postman** (stylised, flat colours): 3D 6.3 min; kept cap, face, bag, shoes. Rigged with `tools/rig_humanoid.py` (21 bones, auto weights, Idle+Walk) — walk pose looks clean in stills. Rig gotcha: GLB is triangle soup, must weld vertices before Blender auto-weights or they silently fail.
+- **barbarian** (painterly realistic, fur/braids/straps): 3D 8.7 min (Hunyuan 502 s). Recognisable, but proportions got squatter (short legs, heavy torso), face and hair detail soft, hair colour shifted redder, and the **back is the weak side**: orange/rust blotches on the upper back and the rear. Fine detail (braids, straps, fur trim) mostly became texture, not geometry. Not rigged (by decision).
+- Conclusion so far: the stylised character translates far better than the painterly-realistic one; characters are only a base mesh for hand polish (tri topology, no edge loops for deformation), while props are the realistic use case.
