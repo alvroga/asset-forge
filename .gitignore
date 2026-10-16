@@ -3,3 +3,5 @@ runs/*/*/
 !runs/*/report.md
 .DS_Store
 *.log
+__pycache__/
+

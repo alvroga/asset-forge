@@ -2,7 +2,7 @@
 
 ## What this is
 A **test bench** for local, offline AI game-asset generation on an Apple Silicon Mac (M1 Ultra, 128 GB).
-Goal: decide whether this pipeline can complement the studio-kit (`~/Projects/studio-kit`) for **videogame**
+Goal: decide whether this pipeline can complement the studio-kit (private repo) for **videogame**
 projects. It is NOT a game and NOT part of tennis-spike (halted) or studio-kit.
 
 Recipe under test (recommended by other users): **Qwen-Image -> Hunyuan3D -> Hunyuan Paint -> Unity**.

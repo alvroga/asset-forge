@@ -39,7 +39,7 @@ Peak memory not measured (qwen process alone showed ~13.7 GB RSS).
 
 ## Not tested
 - Prop-sheet mode (one image -> nine props); Pixal3D / TRELLIS.2 comparison; Unity import (not installed, glTFast plan only);
-  rigging/animation; creatures (a dragon 2D image exists in `runs/dragon/` but has not been run through 3D yet).
+  rigging/animation; creatures (dragon-like creatures were tried later, see Characters below).
 
 ## Licence caveats (see LICENCES.md)
 Qwen weights are non-commercial; Hunyuan is not licensed in EU/UK/South Korea. Every asset here is a **test output, not shippable**.
@@ -59,4 +59,4 @@ and an engine-import check (Unity/glTFast, not done).
 - **postman** (stylised, flat colours): 3D 6.3 min; kept cap, face, bag, shoes. Rigged with `tools/rig_humanoid.py` (21 bones, auto weights, Idle+Walk) — walk pose looks clean in stills. Rig gotcha: GLB is triangle soup, must weld vertices before Blender auto-weights or they silently fail.
 - **barbarian** (painterly realistic, fur/braids/straps): 3D 8.7 min (Hunyuan 502 s). Recognisable, but proportions got squatter (short legs, heavy torso), face and hair detail soft, hair colour shifted redder, and the **back is the weak side**: orange/rust blotches on the upper back and the rear. Fine detail (braids, straps, fur trim) mostly became texture, not geometry. Not rigged (by decision).
 - Conclusion so far: the stylised character translates far better than the painterly-realistic one; characters are only a base mesh for hand polish (tri topology, no edge loops for deformation), while props are the realistic use case.
-- **dragon** (made-up creature, user's `source_v3.4.png`): 3D 15.4 min (Hunyuan 866 s, slowest of all). Kept S body, both wings, skin-toned arm, spikes, scales, and the **thin stick legs with bird feet** (better than the racket strings). Failures: Hunyuan **invented a second arm** on the unseen side (symmetry assumption), body is ribbon-flat from the side, head/face soft. For printing: legs and wing membranes too thin, extra arm needs removing.
+- **dragon** (made-up creature; the source image is not included in this public repo): 3D 15.4 min (Hunyuan 866 s, slowest of all). Kept S body, both wings, skin-toned arm, spikes, scales, and the **thin stick legs with bird feet** (better than the racket strings). Failures: Hunyuan **invented a second arm** on the unseen side (symmetry assumption), body is ribbon-flat from the side, head/face soft. For printing: legs and wing membranes too thin, extra arm needs removing.
